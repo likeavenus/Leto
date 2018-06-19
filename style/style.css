@@ -143,6 +143,17 @@ h1,h2,p {
   margin-top: 62px;
   text-align: center;
 }
+.turtle {
+  animation: rotate 2s alternate  infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
 .call {
   font-size: 57px;
   color: #184a6f;
