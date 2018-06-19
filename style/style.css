@@ -76,11 +76,16 @@ h1,h2,p {
   margin: auto;
 }
 .tree__button {
-  font-size: 72px;
+  font-size: 80px;
+  text-transform: uppercase;
+  padding: 0 10px 0 10px;
   margin-top: 55px;
   font-weight: bold;
   background: #ffa358;
-  border: none;
+  border-top: 7px solid #ffdaa4;
+  border-right: 7px solid #ffc586;
+  border-bottom: 7px solid #cc8246;
+  border-left: 7px solid #cc8246;
   color: #980607;
 }
 
