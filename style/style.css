@@ -23,7 +23,7 @@ h1,h2,p {
   color: #184a6f;
 }
 .background {
-  background: url(../img/bg.jpg) no-repeat center;
+  background: url(../img/bg.jpg) no-repeat 50% 0%;
   max-width: 1920px;
   width: 100%;
 }
