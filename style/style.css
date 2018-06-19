@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Segoe UI;
+  src: url(../fonts/SegoeUIBlack.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Segoe UI;
+}
+main {
+  padding-bottom: 65px;
+}
+h1,h2,p {
+  text-transform: uppercase;
+}
+.container,.container-2 {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.head-color {
+  color: #184a6f;
+}
+.background {
+  background: url(../img/bg.jpg) no-repeat center;
+  max-width: 1920px;
+  width: 100%;
+}
+.header__box {
+  padding: 25px 0;
+  text-align: center;
+}
+.main__title-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.main__title-top {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.main__title-bot {
+  text-transform: uppercase;
+  font-size: 64px;
+  margin-top: 0;
+}
+.cost {
+  font-size: 75px;
+  color: #ff1a14;
+}
+
+.tree {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background: url(../img/tree.png) no-repeat;
+  width: 575px;
+  height: 204px;
+  margin: auto;
+}
+.tree__button {
+  font-size: 72px;
+  margin-top: 55px;
+  font-weight: bold;
+  background: #ffa358;
+  border: none;
+  color: #980607;
+}
+
+.container-2__title {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  text-shadow: -5px 5px 5px #2f3638;
+}
+.vouchers {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 65px;
+  background: url(../img/rectangle.png) no-repeat;
+  position: relative;
+  z-index: 1;
+  width: 1250px;
+  color: #fff;
+}
+.voucher {
+  text-align: center;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.voucher:hover {
+  transform: scale(1.2);
+}
+.voucher__img:after {
+  content: '';
+  display: inline-block;
+  background: url(../img/shesterenka.png) no-repeat;
+  width: 154px;
+  height: 165px;
+}
+.voucer__text {
+  width: 320px;
+}
+.voucher__name {
+  font-size: 35px;
+  text-shadow: 4px 5px 2px #000;
+  margin: 0;
+}
+.voucher__date {
+  font-size: 26px;
+  color: #184a6f;
+  margin-top: 10px;
+}
+.voucher:hover .voucher__date {
+  color: #FF0000;
+}
+
+.container-3 {
+  margin-top: 62px;
+  text-align: center;
+}
+.call {
+  font-size: 57px;
+  color: #184a6f;
+  margin-bottom: 0;
+}
