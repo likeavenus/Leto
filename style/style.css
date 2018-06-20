@@ -143,14 +143,20 @@ h1,h2,p {
   margin-top: 62px;
   text-align: center;
 }
-.turtle {
-  animation: rotate 2s alternate  infinite;
+.turtle__animation {
+  animation: rotate 1s linear infinite;
 }
 @keyframes rotate {
-  from {
+/*  0% {
+    transform: rotate(0deg);
+  }*/
+  00% {
+    transform: rotate(10deg);
+  }
+  50% {
     transform: rotate(-10deg);
   }
-  to {
+  100% {
     transform: rotate(10deg);
   }
 }
