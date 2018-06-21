@@ -9,6 +9,14 @@
 body {
   font-family: Segoe UI;
   overflow-x: hidden;
+  background: url(../img/bg.jpg) no-repeat 50% 0%;
+}
+
+@media (max-width: 500px) {
+ body {
+    background: url(../img/adaptive/island.png) no-repeat;
+    height: 100%;
+ }
 }
 header {
   position: relative;
@@ -30,23 +38,19 @@ h1,h2,p {
   color: #184a6f;
 }
 .background {
-  background: url(../img/bg.jpg) no-repeat 50% 0%;
+/*
   max-width: 1920px;
   width: 100%;
   height: 100%;
-  margin: auto;
+  margin: auto;*/
 }
-@media (max-width: 500px) {
-  .background {
-    background: url(../img/adaptive/island.png) no-repeat 15% 10%;
-    -webkit-background-size: cover;
-    background-size: cover;
-  }
-}
+
 .header__box {
   width: 100%;
   padding: 25px 0;
   text-align: center;
+  position: relative;
+  overflow-x: hidden;
 }
 .header__plane {
   position: absolute;
@@ -91,7 +95,7 @@ h1,h2,p {
   font-size: 50px;
   margin-bottom: 0;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main__title-top {
     font-size: 26px;
   }
@@ -105,7 +109,7 @@ h1,h2,p {
   font-size: 75px;
   color: #ff1a14;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main__title-bot,.cost {
     display: none;
   }
@@ -113,12 +117,12 @@ h1,h2,p {
 .main__title-adapt,.cost__adapt {
   display: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main__title-top {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .main__title-adapt {
     display: inline-block;
     font-size: 25px;
@@ -152,7 +156,7 @@ h1,h2,p {
 }
 @media (max-width: 500px) {
   .tree {
-    transform: scale(0.7);
+    transform: scale(0.8);
     background: url(../img/adaptive/tree-adapt.png) no-repeat;
     width: 260px;
     height: 92px;
@@ -175,6 +179,9 @@ h1,h2,p {
   .tree__button {
     font-size: 20px;
   }
+}
+.tree__button:hover + .crab {
+  animation-play-state: paused;
 }
 .btn-wrap {
   margin: 55px 0 0 54px;
@@ -201,13 +208,18 @@ h1,h2,p {
   .container-2__box {
     height: 100%;
     border-radius: 10px;
-    border: 5px solid #fff;
-    box-shadow: -5px 5px 1px rgba(0, 0, 0, 0.5);
+    border: 10px solid #fff;
+    box-shadow: -10px 10px 1px rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 676px) {
   .voucher {
     margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .voucher {
+    transform: scale(0.8);
   }
 }
 .container-2__title {
@@ -253,7 +265,7 @@ h1,h2,p {
   transform: scale(1.2);
 }
 .voucher--small {
-  transform: scale(0.8);
+  transform: scale(0.7);
 }
 
 .voucher__img-add {
@@ -320,9 +332,9 @@ h1,h2,p {
   height: 150px;
   animation: crab 1.8s linear alternate infinite;
 }
-.tree:hover .crab {
+/*.tree:hover .crab {
   animation-play-state: paused;
-}
+}*/
 .crab:hover .crab__foot-l {
   -webkit-animation: none;
   -o-animation: none;
@@ -384,13 +396,13 @@ h1,h2,p {
   bottom: 2px;
   left: -6px;
   z-index: 0;
-  animation: l-leg .3s linear alternate infinite;
+  animation: l-leg .1s linear alternate infinite;
 }
 .crab__foot-r {
   bottom: 2px;
   right: -6px;
   z-index: 0;
-  animation: r-leg .3s linear alternate infinite;
+  animation: r-leg .1s linear alternate infinite;
 }
 
 /*crab animation*/
