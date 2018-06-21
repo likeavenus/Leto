@@ -10,11 +10,14 @@ body {
   font-family: Segoe UI;
   overflow-x: hidden;
   background: url(../img/bg.jpg) no-repeat 50% 0%;
+  height: 840px;
 }
 
 @media (max-width: 500px) {
  body {
-    background: url(../img/adaptive/island.png) no-repeat;
+    background: url(../img/adaptive/island.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     height: 100%;
  }
 }
@@ -52,10 +55,38 @@ h1,h2,p {
   position: relative;
   overflow-x: hidden;
 }
+@media (max-width: 600px) {
+  .header__box {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+}
+@media (min-width: 751px) {
+  .mobile-logo {
+    display: none;
+  }
+}
+@media (max-width: 749px) {
+  .mobile-logo {
+    display: inline-block;
+  }
+}
+
+
 .header__plane {
   position: absolute;
   left: -232px;
   animation: plane 14s 1.5s linear forwards infinite;
+  z-index: 5;
+}
+@media (max-width: 600px) {
+  .header__plane {
+    top: 0;
+  }
 }
 @keyframes plane {
   0% {
@@ -95,49 +126,30 @@ h1,h2,p {
   font-size: 50px;
   margin-bottom: 0;
 }
-@media (max-width: 700px) {
-  .main__title-top {
-    font-size: 26px;
-  }
-}
 .main__title-bot {
   text-transform: uppercase;
   font-size: 64px;
   margin-top: 0;
 }
+@media (max-width: 795px) {
+  .main__title-top,.main__title-bot {
+    font-size: 26px;
+  }
+}
+@media (max-width: 795px) {
+  .main__title-bot {
+    width: 200px;
+  }
+}
 .cost {
   font-size: 75px;
   color: #ff1a14;
 }
-@media (max-width: 700px) {
-  .main__title-bot,.cost {
-    display: none;
+@media (max-width: 795px) {
+  .cost {
+    font-size: 45px;
   }
 }
-.main__title-adapt,.cost__adapt {
-  display: none;
-}
-@media (max-width: 700px) {
-  .main__title-top {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 700px) {
-  .main__title-adapt {
-    display: inline-block;
-    font-size: 25px;
-    margin: 0;
-  }
-}
-@media (max-width: 500px) {
-  .cost__adapt {
-    display: inline-block;
-    color: #ff1a14;
-    font-size: 40px;
-    margin: 0;
-  }
-}
-
 .tree {
   display: -webkit-flex;
   display: -moz-flex;
@@ -154,9 +166,8 @@ h1,h2,p {
   margin: auto;
   position: relative;
 }
-@media (max-width: 500px) {
+@media (max-width: 795px) {
   .tree {
-    transform: scale(0.8);
     background: url(../img/adaptive/tree-adapt.png) no-repeat;
     width: 260px;
     height: 92px;
@@ -175,9 +186,14 @@ h1,h2,p {
   color: #980607;
   line-height: 1;
 }
-@media (max-width: 500px) {
+@media (max-width: 795px) {
   .tree__button {
-    font-size: 20px;
+    font-size: 32px;
+    border-top: 4px solid #ffdaa4;
+    border-right: 4px solid #ffc586;
+    border-bottom: 4px solid #cc8246;
+    border-left: 4px solid #cc8246;
+    padding: 0 22px;
   }
 }
 .tree__button:hover + .crab {
@@ -189,8 +205,14 @@ h1,h2,p {
   border: 10px solid #7e3600;
   box-shadow: -1px 1px 5px #000;
 }
-.btn-border {}
-
+@media (max-width: 795px) {
+  .btn-wrap {
+    margin: 0;
+    border: 5px solid #7e3600;
+    border-radius: 6px;
+    margin-top: 21px;
+  }
+}
 .container-2__box {
   text-transform: uppercase;
   border: 10px solid #fff;
@@ -217,9 +239,9 @@ h1,h2,p {
     margin: 0 auto;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 380px) {
   .voucher {
-    transform: scale(0.8);
+    transform: scale(0.5);
   }
 }
 .container-2__title {
@@ -280,6 +302,11 @@ h1,h2,p {
 .voucher:last-child .voucher__text {
   width: 296px;
 }
+@media (max-width: 400px) {
+  .voucher-box .voucher .voucher__text {
+    width: 259px;
+  }
+}
 .voucher__name {
   font-size: 35px;
   text-shadow: 4px 5px 2px #000;
@@ -332,10 +359,8 @@ h1,h2,p {
   height: 150px;
   animation: crab 1.8s linear alternate infinite;
 }
-/*.tree:hover .crab {
-  animation-play-state: paused;
-}*/
-.crab:hover .crab__foot-l {
+
+.tree__button:hover .crab__foot-l {
   -webkit-animation: none;
   -o-animation: none;
   animation: none;
@@ -417,7 +442,11 @@ h1,h2,p {
 }
 
 @keyframes l-leg {
-  to {
+  50% {
+    transform: rotate(15deg);
+    padding: 0 10px 10px 0;
+  }
+  100% {
     transform: rotate(30deg);
     padding: 0 20px 20px 0;
   }
@@ -435,7 +464,6 @@ h1,h2,p {
 @keyframes hover {
   33% {
     transform: rotate(0deg);
-
   }
   66% {
     transform: rotate(-10deg);
@@ -443,7 +471,6 @@ h1,h2,p {
   }
   99% {
     transform: rotate(0deg);
-
   }
 }
 
@@ -494,4 +521,15 @@ h1,h2,p {
   to {
     transform: scale(1);
   }
+}
+
+/* crab 400px*/
+@media (max-width: 795px) {
+  .crab {
+    left: 50px;
+    transform: scale(0.2);
+  }
+}
+.tree__button:hover .crab__foot-l {
+  animation: none;
 }
