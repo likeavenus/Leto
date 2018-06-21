@@ -126,8 +126,7 @@ h1,h2,p {
   box-shadow: -1px 1px 5px #000;
 }
 .btn-border {}
-.container-2 {
-}
+
 .container-2__wrapper {
   text-transform: uppercase;
   border: 10px solid #fff;
@@ -238,6 +237,9 @@ h1,h2,p {
   width: 135px;
   height: 150px;
   animation: crab 1.8s linear alternate infinite;
+}
+.crab:hover {
+  animation: none;
 }
 .crab-el {
   position: absolute;
