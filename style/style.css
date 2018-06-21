@@ -14,7 +14,9 @@ header {
   position: relative;
 }
 main {
+  width: 100%;
   padding-bottom: 65px;
+  margin: 0 auto;
 }
 h1,h2,p {
   text-transform: uppercase;
@@ -32,6 +34,11 @@ h1,h2,p {
   max-width: 1920px;
   width: 100%;
   margin: auto;
+}
+@media (max-width: 500px) {
+  .background {
+    background: url(../img/adaptive/island.png) no-repeat;
+  }
 }
 .header__box {
   width: 100%;
@@ -81,6 +88,11 @@ h1,h2,p {
   font-size: 50px;
   margin-bottom: 0;
 }
+@media (max-width: 500px) {
+  .main__title-top {
+    font-size: 26px;
+  }
+}
 .main__title-bot {
   text-transform: uppercase;
   font-size: 64px;
@@ -89,6 +101,34 @@ h1,h2,p {
 .cost {
   font-size: 75px;
   color: #ff1a14;
+}
+@media (max-width: 500px) {
+  .main__title-bot,.cost {
+    display: none;
+  }
+}
+.main__title-adapt,.cost__adapt {
+  display: none;
+}
+@media (max-width: 500px) {
+  .main__title-top {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .main__title-adapt {
+    display: inline-block;
+    font-size: 25px;
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .cost__adapt {
+    display: inline-block;
+    color: #ff1a14;
+    font-size: 40px;
+    margin: 0;
+  }
 }
 
 .tree {
@@ -101,10 +141,19 @@ h1,h2,p {
   -ms-align-items: center;
   align-items: center;
   background: url(../img/tree.png) no-repeat;
-  width: 575px;
+  max-width: 575px;
+  width: 100%;
   height: 204px;
   margin: auto;
   position: relative;
+}
+@media (max-width: 500px) {
+  .tree {
+    transform: scale(0.7);
+    background: url(../img/adaptive/tree-adapt.png) no-repeat;
+    width: 260px;
+    height: 92px;
+  }
 }
 .tree__button {
   font-size: 80px;
@@ -118,6 +167,13 @@ h1,h2,p {
   border-left: 7px solid #cc8246;
   color: #980607;
   line-height: 1;
+}
+@media (max-width: 500px) {
+  .tree__button {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+  }
 }
 .btn-wrap {
   margin: 55px 0 0 54px;
@@ -210,9 +266,6 @@ h1,h2,p {
   animation: rotate 1.5s linear infinite;
 }
 @keyframes rotate {
-/*  0% {
-    transform: rotate(0deg);
-  }*/
   0% {
     transform: rotate(10deg);
   }
@@ -237,6 +290,17 @@ h1,h2,p {
   width: 135px;
   height: 150px;
   animation: crab 1.8s linear alternate infinite;
+}
+.tree:hover .crab {
+  animation-play-state: paused;
+}
+.crab:hover .crab__foot-l {
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+.crab:hover .crab__foot-r {
+  animation: hover .2s linear infinite;
 }
 .crab-el {
   position: absolute;
@@ -325,6 +389,20 @@ h1,h2,p {
    to {
     transform: rotate(0deg);
     padding: 0;
+  }
+}
+@keyframes hover {
+  33% {
+    transform: rotate(0deg);
+
+  }
+  66% {
+    transform: rotate(-10deg);
+    bottom: 25px;
+  }
+  99% {
+    transform: rotate(0deg);
+
   }
 }
 
