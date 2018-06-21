@@ -238,9 +238,6 @@ h1,h2,p {
   height: 150px;
   animation: crab 1.8s linear alternate infinite;
 }
-.crab:hover {
-  animation: none;
-}
 .crab-el {
   position: absolute;
 }
