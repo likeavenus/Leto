@@ -32,7 +32,7 @@ main {
 h1,h2,p {
   text-transform: uppercase;
 }
-.container,.container-2 {
+.container {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
@@ -213,6 +213,12 @@ h1,h2,p {
     margin-top: 21px;
   }
 }
+.container-2 {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .container-2__box {
   text-transform: uppercase;
   border: 10px solid #fff;
@@ -236,12 +242,12 @@ h1,h2,p {
 }
 @media (max-width: 676px) {
   .voucher {
-    margin: 0 auto;
+    margin: auto;
   }
 }
 @media (max-width: 380px) {
   .voucher {
-    transform: scale(0.5);
+/*    transform: scale(0.5);*/
   }
 }
 .container-2__title {
@@ -261,6 +267,11 @@ h1,h2,p {
   max-width: 1290px;
   width: 100%;
   color: #fff;
+}
+@media (max-width: 666px) {
+  .voucher {
+    /*transform: scale(0.7);
+*/  }
 }
 .voucher-box {
   width: 100%;
@@ -289,7 +300,30 @@ h1,h2,p {
 .voucher--small {
   transform: scale(0.7);
 }
-
+.voucher__img-a {
+  display: none;
+}
+@media (max-width: 665px) {
+  .voucher__img-a {
+    display: inline-block;
+  }
+}
+@media (max-width: 666px) {
+  .voucher__img,.voucher__img-add {
+    display: none;
+  }
+}
+.voucher__little-img {
+  display: none;
+  position: absolute;
+  bottom: 82px;
+  right: -17px;
+}
+@media (max-width: 666px) {
+  .voucher__little-img {
+    display: inline-block;
+  }
+}
 .voucher__img-add {
   position: absolute;
   right: -19px;
@@ -302,9 +336,9 @@ h1,h2,p {
 .voucher:last-child .voucher__text {
   width: 296px;
 }
-@media (max-width: 400px) {
+@media (max-width: 660px) {
   .voucher-box .voucher .voucher__text {
-    width: 259px;
+    width: 124px;
   }
 }
 .voucher__name {
@@ -319,6 +353,16 @@ h1,h2,p {
   font-size: 26px;
   color: #184a6f;
   margin-top: 10px;
+}
+@media (max-width: 660px) {
+  .voucher__name,.voucher__date {
+    font-size: 15px;
+  }
+}
+@media (max-width: 660px) {
+  .voucher__name {
+    text-shadow: 2px 2px 1px #000;
+  }
 }
 .voucher:hover .voucher__date {
   color: #FF0000;
