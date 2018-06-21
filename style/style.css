@@ -374,8 +374,27 @@ h1,h2,p {
   margin-top: 260px;
   text-align: center;
 }
+@media (max-width: 666px) {
+  .container-3 {
+    margin-top: 25px;
+  }
+}
 .turtle__animation {
   animation: rotate 1.5s linear infinite;
+}
+.turtle__animation-little {
+  display: none;
+  animation: rotate 1.5s linear infinite;
+}
+@media (max-width: 400px) {
+  .turtle__animation {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .turtle__animation-little {
+    display: inline-block;
+  }
 }
 @keyframes rotate {
   0% {
@@ -393,7 +412,11 @@ h1,h2,p {
   color: #184a6f;
   margin-bottom: 0;
 }
-
+@media (max-width: 666px) {
+  .call {
+    font-size: 21px;
+  }
+}
 /* crab*/
 .crab {
   position: absolute;
