@@ -120,6 +120,7 @@ h1,h2,p {
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
+  margin-bottom: 55px;
 }
 .main__title-top {
   text-transform: uppercase;
@@ -147,7 +148,7 @@ h1,h2,p {
 }
 @media (max-width: 795px) {
   .cost {
-    font-size: 45px;
+    font-size: 42px;
   }
 }
 .tree {
@@ -183,7 +184,7 @@ h1,h2,p {
   border-right: 7px solid #ffc586;
   border-bottom: 7px solid #cc8246;
   border-left: 7px solid #cc8246;
-  color: #980607;
+  color: #dc2207;
   line-height: 1;
 }
 @media (max-width: 795px) {
@@ -501,6 +502,7 @@ h1,h2,p {
 .tree__button:hover + .crab .crab__foot-r {
   animation: right-foot-hover 2s linear forwards infinite;
 }
+/*right-foot hover*/
 @keyframes right-foot-hover {
   5% {
     transform: rotate(-15deg);
@@ -533,7 +535,7 @@ h1,h2,p {
 }
 /*crab animation*/
 
-/*right-foot hover*/
+
 
 
 
