@@ -10,7 +10,7 @@ body {
   font-family: Segoe UI;
   overflow-x: hidden;
   background: url(../img/bg.jpg) no-repeat 50% 0%;
-  height: 840px;
+  height: 100%;
 }
 
 @media (max-width: 500px) {
@@ -308,11 +308,6 @@ h1,h2,p {
   width: 100%;
   color: #fff;
 }
-@media (max-width: 666px) {
-  .voucher {
-    /*transform: scale(0.7);
-*/  }
-}
 .voucher-box {
   width: 100%;
   display: -webkit-flex;
@@ -322,6 +317,7 @@ h1,h2,p {
   display: flex;
   -ms-align-items: center;
   align-items: center;
+  justify-content: center;
   flex-flow: row wrap;
 }
 .voucher {
@@ -343,12 +339,12 @@ h1,h2,p {
 .voucher__img-a {
   display: none;
 }
-@media (max-width: 666px) {
+@media (max-width: 734px) {
   .voucher__img-a {
     display: inline-block;
   }
 }
-@media (max-width: 666px) {
+@media (max-width: 734px) {
   .voucher__img,.voucher__img-add {
     display: none;
   }
@@ -356,18 +352,24 @@ h1,h2,p {
 .voucher__little-img {
   display: none;
   position: absolute;
-  bottom: 82px;
+  bottom: 92px;
   right: -17px;
 }
-@media (max-width: 666px) {
+@media (max-width: 734px) {
   .voucher__little-img {
     display: inline-block;
+  }
+}
+@media (min-width: 631px) and (max-width: 734px) {
+  .voucher__little-img {
+    bottom: 73px;
+    right: 61px;
   }
 }
 .voucher__img-add {
   position: absolute;
   right: -19px;
-  bottom: 107px;
+  bottom: 96px;
 }
 .voucher__text {
   width: 320px;
@@ -376,7 +378,7 @@ h1,h2,p {
 .voucher:last-child .voucher__text {
   width: 296px;
 }
-@media (max-width: 660px) {
+@media (max-width: 630px) {
   .voucher-box .voucher .voucher__text {
     width: 124px;
   }
@@ -394,9 +396,9 @@ h1,h2,p {
   color: #184a6f;
   margin-top: 10px;
 }
-@media (max-width: 666px) {
+@media (max-width: 734px) {
   .voucher__name,.voucher__date {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 @media (max-width: 660px) {
@@ -411,10 +413,14 @@ h1,h2,p {
   transform: scale(1.1);
 }
 .container-3 {
-  margin-top: 260px;
   text-align: center;
 }
-@media (max-width: 666px) {
+@media (min-width: 1313px) {
+  .container-3 {
+    margin-top: 260px;
+  }
+}
+@media (max-width: 1312px) {
   .container-3 {
     margin-top: 25px;
   }
