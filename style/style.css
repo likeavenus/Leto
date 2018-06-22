@@ -299,6 +299,7 @@ h1,h2,p {
   text-shadow: -5px 5px 5px #2f3638;
   margin-bottom: 0;
   padding: 0 20px 10px 20px;
+  margin: 0 auto;
 }
 @media (max-width: 600px) {
   .container-2__title {
