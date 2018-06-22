@@ -50,16 +50,16 @@ h1,h2,p {
 
 .header__box {
   width: 100%;
-  padding: 25px 0;
+  padding: 20px 0 40px 0;
   text-align: center;
   position: relative;
   overflow-x: hidden;
 }
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .header__box {
     padding: 15px 0;
   }
-}
+}*/
 @media (max-width: 750px) {
   .logo {
     display: none;
@@ -124,7 +124,8 @@ h1,h2,p {
 }
 @media (max-height: 700px) {
   .main__title-box {
-    margin-bottom: 30px;
+    margin: -33px 0 30px 0;
+    text-align: center;
   }
 }
 .main__title-top {
@@ -225,6 +226,9 @@ h1,h2,p {
 .tree__button:hover + .crab {
   animation-play-state: paused;
 }
+.tree__button:hover + .crab > .crab-box {
+  animation-play-state: paused;
+}
 .btn-wrap {
   margin: 55px 0 0 54px;
   border-radius: 15px;
@@ -243,7 +247,11 @@ h1,h2,p {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+}
+@media (max-width: 700px;) {
+  .container-2 {
+    width: 92%;
+  }
 }
 .container-2__box {
   text-transform: uppercase;
@@ -260,6 +268,7 @@ h1,h2,p {
 }
 @media (max-width: 1312px) {
   .container-2__box {
+    width: 90%;
     height: 100%;
     border-radius: 10px;
     border: 10px solid #fff;
@@ -283,6 +292,11 @@ h1,h2,p {
   text-shadow: -5px 5px 5px #2f3638;
   margin-bottom: 0;
   padding: 0 20px 10px 20px;
+}
+@media (max-width: 600px) {
+  .container-2__title {
+    font-size: 27px;
+  }
 }
 .vouchers {
   display: flex;
@@ -453,11 +467,31 @@ h1,h2,p {
   animation: crab 1.8s linear alternate infinite;
 }
 @media (max-width: 795px) {
-  .crab {
-    left: 50px;
-    transform: scale(0.7);
+  .crab-box {
+    position: absolute;
+    left: 82px;
+    bottom: 10px;
+    width: 135px;
+    height: 150px;
+    transform: scale(0.6);
+    animation: adapt-crab 1.4s linear alternate infinite;
   }
 }
+@keyframes adapt-crab {
+  from {
+    transform: translateX(-120px) scale(0.6);
+  }
+  to {
+    transform: translateX(-20px) scale(0.6);
+  }
+}
+@media (max-width: 795px) {
+  .crab {
+    animation: none;
+    left: 50px;
+  }
+}
+
 .tree__button:hover .crab__foot-l {
   -webkit-animation: none;
   -o-animation: none;
