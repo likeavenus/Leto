@@ -420,7 +420,7 @@ h1,h2,p {
 /* crab*/
 .crab {
   position: absolute;
-  top: -66px;
+  top: -77px;
   left: 238px;
   width: 135px;
   height: 150px;
@@ -431,9 +431,6 @@ h1,h2,p {
   -webkit-animation: none;
   -o-animation: none;
   animation: none;
-}
-.crab:hover .crab__foot-r {
-  animation: hover .2s linear infinite;
 }
 .crab-el {
   position: absolute;
@@ -476,13 +473,13 @@ h1,h2,p {
   bottom: 5px;
   left: 10px;
   z-index: 2;
-  animation: l-hand 0.7s linear alternate infinite;
+  animation: l-hand .7s linear alternate infinite;
 }
 .crab__hand-r {
   bottom: 5px;
   right: 6px;
   z-index: 2;
-  animation: r-hand 0.7s linear alternate infinite;
+  animation: r-hand .7s linear alternate infinite;
 }
 .crab__foot-l {
   bottom: 2px;
@@ -497,7 +494,49 @@ h1,h2,p {
   animation: r-leg .1s linear alternate infinite;
 }
 
+/* left-foot, right-foot hover*/
+.tree__button:hover + .crab .crab__foot-l {
+  animation: none;
+}
+.tree__button:hover + .crab .crab__foot-r {
+  animation: right-foot-hover 2s linear forwards infinite;
+}
+@keyframes right-foot-hover {
+  5% {
+    transform: rotate(-15deg);
+    bottom: 10px;
+  }
+  5.999% {
+    transform: rotate(8deg);
+    bottom: -8px;
+  }
+  20% {
+    transform: rotate(-15deg);
+    bottom: 10px;
+  }
+  21% {
+    transform: rotate(8deg);
+    bottom: -8px;
+  }
+  40% {
+    transform: rotate(8deg);
+    bottom: -8px;
+  }
+  41% {
+    transform: rotate(8deg);
+    bottom: -8px;
+  }
+  100% {
+    transform: rotate(8deg);
+    bottom: -8px;
+  }
+}
 /*crab animation*/
+
+/*right-foot hover*/
+
+
+
 /*legs*/
 @keyframes crab {
   from {
@@ -596,7 +635,4 @@ h1,h2,p {
     left: 50px;
     transform: scale(0.2);
   }
-}
-.tree__button:hover .crab__foot-l {
-  animation: none;
 }
