@@ -191,6 +191,8 @@ h1,h2,p {
 }
 @media (max-width: 795px) {
   .tree__button {
+    width: 100%;
+    height: 100%;
     font-size: 32px;
     border-top: 4px solid #ffdaa4;
     border-right: 4px solid #ffc586;
@@ -210,7 +212,7 @@ h1,h2,p {
   bottom: 50%;
   transform: translate(-50%,50%);
   left: 50%;
-  background: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .4);
 }
 .tree__button:hover:before {
   display: block;
