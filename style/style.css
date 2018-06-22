@@ -122,6 +122,11 @@ h1,h2,p {
   align-items: center;
   margin-bottom: 55px;
 }
+@media (max-height: 700px) {
+  .main__title-box {
+    margin-bottom: 30px;
+  }
+}
 .main__title-top {
   text-transform: uppercase;
   font-size: 50px;
@@ -324,7 +329,7 @@ h1,h2,p {
 .voucher__img-a {
   display: none;
 }
-@media (max-width: 665px) {
+@media (max-width: 666px) {
   .voucher__img-a {
     display: inline-block;
   }
@@ -375,7 +380,7 @@ h1,h2,p {
   color: #184a6f;
   margin-top: 10px;
 }
-@media (max-width: 660px) {
+@media (max-width: 666px) {
   .voucher__name,.voucher__date {
     font-size: 15px;
   }
